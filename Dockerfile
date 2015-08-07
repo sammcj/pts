@@ -17,4 +17,6 @@ RUN export DEBIAN_FRONTEND='noninteractive' && \
     dpkg -i phoronix-test-suite_${version}_all.deb && \
     rm -rf /var/lib/apt/lists/* /tmp/* phoronix-test-suite_${version}_all.deb
 
+ADD phoronix-test-suite.xml /etc/phoronix-test-suite.xml
+
 CMD phoronix-test-suite
